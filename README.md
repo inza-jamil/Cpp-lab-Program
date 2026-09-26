@@ -18,9 +18,9 @@ int main() {
     cout << "The journey of a thousand miles begins with a single line of code." << endl;
     return 0;
 }
-**** Program 2: Sum of Squares (∑X²)****
- Code
-cpp
+## Program 2: Sum of Squares (∑X²)
+
+ ```cpp
 #include <iostream>
 using namespace std;
 
@@ -43,7 +43,9 @@ int main() {
 }
 <img width="438" height="191" alt="output Program 01" src="https://github.com/user-attachments/assets/1b151a19-b07b-484d-ae2f-f9d09d243687" />
 
-**Program 03 ArrayList with 8 Functions**
+## Program 03 ArrayList with 8 Functions
+
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -221,6 +223,7 @@ int main() {
     return 0;
 }
 ###OUTPUT
+
 After insertEnd(10, 20, 30): List: 10 20 30
 After insertStart(5): List: 5 10 20 30
 After insertAfter(20, 25): List: 5 10 20 25 30
@@ -229,8 +232,11 @@ After deleteEnd(): List: 5 10 20 25 28
 After deleteStart(): List: 10 20 25 28
 After deleteValue(25): List: 10 20 28
 
-*PROGRAM 04 *
+ ## PROGRAM 04
+
 **Linear Search Using While Loop**
+
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -409,6 +415,7 @@ int main() {
     return 0;
 }
 ###Output
+
 === ArrayList ===
 List: 10 20 30 40 50
 
@@ -416,8 +423,9 @@ List: 10 20 30 40 50
 Enter value to search: 30
 Value 30 found at position 2
 
-**Lab 02**
-Singly Linked List
+# Lab 02
+
+## Singly Linked List
 This lab teaches you the following topics:
 • Creation of singly linked list
 • Insertion in singly linked list
@@ -439,7 +447,9 @@ struct Nodetype
 };
 Nodetype *first=NULL, *last=NULL; /* first and last pointers are global and point first and last node */
 
-Lab Task 1: Display Linked List in Reverse (Loop + Recursion)
+## Lab Task 1: Display Linked List in Reverse (Loop + Recursion)
+
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -550,8 +560,11 @@ int main() {
 
     return 0;
 }
-<img width="598" height="217" alt="image" src="https://github.com/user-attachments/assets/a7b1dc86-4b85-4270-9c5b-d6c2fd9e1ce2" />
-Lab Task 2: Merge Two Linked Lists
+<img width="598" height="217" alt="Screenshot 2026-09-26 095759" src="https://github.com/user-attachments/assets/47612f2c-636d-49ac-ab4d-5f391514c9e3" />
+
+# Lab Task 2: Merge Two Linked Lists
+
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -669,8 +682,11 @@ int main() {
 
     return 0;
 }
-<img width="516" height="196" alt="image" src="https://github.com/user-attachments/assets/05e7f7e8-3c47-407a-8c44-b915ed3d46fa" />
-Lab Task 3: Find Multiple Occurrences
+<img width="516" height="196" alt="Screenshot 2026-09-26 095931" src="https://github.com/user-attachments/assets/d4f3e486-1e7b-40bd-89ad-f90f4bfdbd06" />
+
+# Lab Task 3: Find Multiple Occurrences
+
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -766,8 +782,10 @@ int main() {
 
     return 0;
 }
-<img width="544" height="286" alt="image" src="https://github.com/user-attachments/assets/e3a27622-6e69-4511-87aa-0389db12b148" />
-**Lab Task 1: Reverse Linked List (Loop + Recursion)**
+<img width="544" height="286" alt="Screenshot 2026-09-26 100106" src="https://github.com/user-attachments/assets/740fc58c-2501-4acb-b833-0fa2c076daad" />
+
+### Lab Task 1: Reverse Linked List (Loop + Recursion)
+
  *Important Points*
 Singly Linked List is a data structure where each node points to the next node only in one direction.
 Reverse display means printing the list from last node to first node.
@@ -782,7 +800,8 @@ Both approaches produce the same output but use different techniques.
 Time Complexity: O(n) for both approaches.
 Space Complexity: O(n) for both (array in loop, call stack in recursion).
 
-**Lab Task 2: Merge Two Linked Lists**
+## Lab Task 2: Merge Two Linked Lists**
+
  *Important Points*
 Merge means combining two linked lists into a third new linked list.
 
@@ -814,7 +833,8 @@ Time Complexity: O(n + m), where n and m are the sizes of the two lists.
 
 Space Complexity: O(n + m) for the new list.
 
-**Lab Task 3: Find Multiple Occurrences**
+## Lab Task 3: Find Multiple Occurrences**
+
 *Important Points*
 Multiple occurrences means finding all positions where a specific value appears in the list.
 
@@ -849,18 +869,19 @@ Time Complexity: O(n), where n is the number of nodes.
 Space Complexity: O(1), because no extra data structure is used.
 
 # Assignment 01 — ArrayList, Pointer Traversal & Problem Solving
-##  Problem Statement
+### Problem Statement
 A short description of what the assignment is about.
-## 📂 Parts Overview
+## Parts Overview
 
-| Part | Description |
-|------|-------------|
-| Part A | Create and Populate the ArrayList 
-| Part B | Pointer Traversal, Sum, Minimum and Maximum 
-| Part C | Find the Median 
-| Part D | Two Averages and Closest Value 
-| Part E | Final Calculations and ArrayList Modification
+| Part     |     Description   
+| Part A   | Create and Populate the ArrayList 
+| Part B   | Pointer Traversal, Sum, Minimum and Maximum 
+| Part C   | Find the Median 
+| Part D   | Two Averages and Closest Value 
+| Part E   | Final Calculations and ArrayList Modification
 ##CODE
+
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -1068,4 +1089,10 @@ int main() {
 
     return 0;
 }
-<img width="962" height="592" alt="image" src="https://github.com/user-attachments/assets/1b305b0a-b6c8-472d-bea3-f84c701ed8ab" />
+<img width="962" height="592" alt="Screenshot 2026-09-26 101216" src="https://github.com/user-attachments/assets/90117215-a485-4e2a-a459-214151e41fec" />
+
+
+## 👩‍💻 Author
+
+**Inza Bibi**
+Registration No: FA25-BCS-031
