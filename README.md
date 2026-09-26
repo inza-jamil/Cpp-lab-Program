@@ -18,6 +18,8 @@ int main() {
     cout << "The journey of a thousand miles begins with a single line of code." << endl;
     return 0;
 }
+---
+
 ## Program 2: Sum of Squares (∑X²)
 
  ```cpp
@@ -41,7 +43,10 @@ int main() {
     cout << "Sum of squares = " << sum << endl;
     return 0;
 }
+
 <img width="438" height="191" alt="output Program 01" src="https://github.com/user-attachments/assets/1b151a19-b07b-484d-ae2f-f9d09d243687" />
+
+---
 
 ## Program 03 ArrayList with 8 Functions
 
@@ -222,6 +227,7 @@ int main() {
 
     return 0;
 }
+
 ###OUTPUT
 
 After insertEnd(10, 20, 30): List: 10 20 30
@@ -231,6 +237,8 @@ After insertBefore(30, 28): List: 5 10 20 25 28 30
 After deleteEnd(): List: 5 10 20 25 28
 After deleteStart(): List: 10 20 25 28
 After deleteValue(25): List: 10 20 28
+
+---
 
  ## PROGRAM 04
 
@@ -375,11 +383,11 @@ int linearSearch(ArrayList &list, int target) {
     int i = 0;
     while (i < list.size) {
         if (list.data[i] == target) {
-            return i;    // Value mil gayi, position return
+            return i;    
         }
         i++;
     }
-    return -1;    // Value nahi mili
+    return -1;    
 }
 
 // ==================== MAIN ====================
@@ -387,7 +395,7 @@ int linearSearch(ArrayList &list, int target) {
 int main() {
     ArrayList list;
 
-    // Lab Task 2 ke functions use karein
+  
     insertEnd(list, 10);
     insertEnd(list, 20);
     insertEnd(list, 30);
@@ -414,6 +422,7 @@ int main() {
 
     return 0;
 }
+
 ###Output
 
 === ArrayList ===
@@ -422,6 +431,8 @@ List: 10 20 30 40 50
 === Linear Search ===
 Enter value to search: 30
 Value 30 found at position 2
+
+---
 
 # Lab 02
 
@@ -560,7 +571,10 @@ int main() {
 
     return 0;
 }
+
 <img width="598" height="217" alt="Screenshot 2026-09-26 095759" src="https://github.com/user-attachments/assets/47612f2c-636d-49ac-ab4d-5f391514c9e3" />
+
+---
 
 # Lab Task 2: Merge Two Linked Lists
 
@@ -682,7 +696,10 @@ int main() {
 
     return 0;
 }
+
 <img width="516" height="196" alt="Screenshot 2026-09-26 095931" src="https://github.com/user-attachments/assets/d4f3e486-1e7b-40bd-89ad-f90f4bfdbd06" />
+
+---
 
 # Lab Task 3: Find Multiple Occurrences
 
@@ -782,7 +799,10 @@ int main() {
 
     return 0;
 }
+
 <img width="544" height="286" alt="Screenshot 2026-09-26 100106" src="https://github.com/user-attachments/assets/740fc58c-2501-4acb-b833-0fa2c076daad" />
+
+---
 
 ### Lab Task 1: Reverse Linked List (Loop + Recursion)
 
@@ -869,8 +889,11 @@ Time Complexity: O(n), where n is the number of nodes.
 Space Complexity: O(1), because no extra data structure is used.
 
 # Assignment 01 — ArrayList, Pointer Traversal & Problem Solving
+
 ### Problem Statement
+
 A short description of what the assignment is about.
+
 ## Parts Overview
 
 | Part     |     Description   
@@ -879,6 +902,7 @@ A short description of what the assignment is about.
 | Part C   | Find the Median 
 | Part D   | Two Averages and Closest Value 
 | Part E   | Final Calculations and ArrayList Modification
+
 ##CODE
 
 ```cpp
@@ -1089,8 +1113,10 @@ int main() {
 
     return 0;
 }
+
 <img width="962" height="592" alt="Screenshot 2026-09-26 101216" src="https://github.com/user-attachments/assets/90117215-a485-4e2a-a459-214151e41fec" />
 
+---
 
 ## 👩‍💻 Author
 
