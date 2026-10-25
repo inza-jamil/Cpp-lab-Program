@@ -1,0 +1,195 @@
+#Lab 07
+##Binary Search Tree (BST)
+Activity Outcomes:
+This lab teaches you the following topics:
+• How to code BST as a special case of Binary Tree
+• BST Traversals, PreOrder, InOrder and PostOrder
+• Searching in BST
+
+LAB TASK 1:
+
+Implement the methods for Tree Traversal with Right Branch Priority i.e. Pre Order (NRL), Post Order (RLN) and In Order (RNL). CODE
+#include <iostream>
+using namespace std;
+struct Node {
+int data;
+Node* left;
+Node* right;
+Node(int value) {
+data = value;
+left = right = NULL;
+}
+};
+Node* insert(Node* root, int value) {
+if (root == NULL)
+return new Node(value);
+if (value < root->data)
+root->left = insert(root->left, value);
+else if (value > root->data)
+root->right = insert(root->right, value);
+return root;
+}
+int printLeafNodes(Node* root) {
+if (root == NULL)
+return 0;
+if (root->left == NULL &&
+root->right == NULL) {
+cout << root->data << " ";
+return 1;
+}
+return printLeafNodes(root->left)
++ printLeafNodes(root->right);
+}
+int main() {
+Node* root = NULL;
+int n, value;
+cout << "Enter number of nodes: ";
+cin >> n;
+cout << "Enter values: ";
+for (int i = 0; i < n; i++) {
+cin >> value;
+root = insert(root, value);
+}
+cout << "Leaf nodes: ";
+int count = printLeafNodes(root);
+cout << "\nTotal leaf nodes: " << count;
+return 0;
+}
+
+Lab task 2
+
+Write down code to print and count Leaf nodes of a BST. #include <iostream>
+using namespace std;
+struct Node {
+int data;
+Node* left;
+Node* right;
+Node(int value) {
+data = value;
+left = right = NULL; }
+};
+Node* insert(Node* root, int value) {
+if (root == NULL)
+return new Node(value);
+if (value < root->data)
+root->left = insert(root->left, value);
+else if (value > root->data root->right = insert(root->right, value);
+return root;
+}
+int printLeafNodes(Node* root) {
+if (root == NULL)
+return 0;
+if (root->left == NULL &&
+root->right == NULL) {
+cout << root->data << " ";
+return 1;
+}
+return printLeafNodes(root->left)
++ printLeafNodes(root->right);
+}
+int main() {
+Node* root = NULL;
+int n, value;
+cout << "Enter number of nodes: ";
+cin >> n;
+cout << "Enter values: ";
+for (int i = 0; i < n; i++) {
+cin >> value;
+root = insert(root, value);
+}
+cout << "Leaf nodes: ";
+int count = printLeafNodes(root);
+cout << "\nTotal leaf nodes: " << count;
+return 0;
+}
+
+Lab task 3
+
+Introduce method to delete a Node from BST, keep in mind that there are 3 possiblities
+for deletion, Node without any child, Node with One child and Node with both the
+children. #include <iostream>
+using namespace std;
+struct Node {
+int data;
+Node* left;
+Node* right;
+Node(int value) {
+data = value;
+left = right = NULL;
+}
+};
+Node* insert(Node* root, int value) {
+if (root == NULL)
+return new Node(value);
+if (value < root->data)
+root->left = insert(root->left, value);
+else if (value > root->data)
+root->right = insert(root->right, value);
+return root;
+}
+Node* findMin(Node* root) {
+while (root != NULL && root->left != NULL)
+root = root->left;
+return root;
+}
+Node* deleteNode(Node* root, int value) {
+if (root == NULL)
+return NULL;
+if (value < root->data) {
+root->left = deleteNode(root->left, value);
+}
+else if (value > root->data) {
+root->right = deleteNode(root->right, value);
+}
+else {
+// Case 1: No child
+if (root->left == NULL &&
+root->right == NULL) {
+delete root;
+return NULL;
+}
+// Case 2: One child
+if (root->left == NULL) {
+Node* temp = root->right;
+delete root;
+return temp;
+}
+if (root->right == NULL) {
+Node* temp = root->left;
+delete root;
+return temp;
+}
+// Case 3: Both children
+Node* temp = findMin(root->right);
+root->data = temp->data;
+root->right = deleteNode(
+root->right, temp->data);
+}
+return root;
+}
+void displayInOrder(Node* root) {
+if (root == NULL)
+return;
+displayInOrder(root->left);
+cout << root->data << " ";
+displayInOrder(root->right);
+}
+int main() {
+Node* root = NULL;
+int n, value, del;
+cout << "Enter number of nodes: ";
+cin >> n;
+cout << "Enter values: ";
+for (int i = 0; i < n; i++) {
+cin >> value;
+root = insert(root, value);
+}
+cout << "Original BST: ";
+displayInOrder(root);
+cout << "\nEnter value to delete: ";
+cin >> del;
+root = deleteNode(root, del);
+cout << "BST after deletion: ";
+displayInOrder(root);
+return 0;
+}
